@@ -9,11 +9,21 @@ use Carbon\Carbon;
 class SourceCSVRepository extends BaseRepository implements ISourceCSV
 {
 
+    /**
+     * method for define model.
+     * 
+     * @return model class
+     */
     public function model()
     {
         return Transaction::class;
     }
     
+    /**
+     * method for getting transactions from uploaded csv file.
+     * 
+     * @return model object
+     */
     public function getCSV()
     {
         $csv_file = storage_path() . '/uploads/csv/transactions.csv';

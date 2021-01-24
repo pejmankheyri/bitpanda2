@@ -14,6 +14,9 @@ class TransactionController extends Controller
     protected $sourceCSVs;
     protected $sourceSQLs;
 
+    /**
+     * @constructor for getting SourceCSV, SourceSQL repositories.
+     */
     public function __construct(
         ISourceCSV $sourceCSVs, 
         ISourceSQL $sourceSQLs
